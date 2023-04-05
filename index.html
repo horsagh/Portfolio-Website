@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Orsagh</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+    <script src="js/tabSwitcher.js"></script>
+     
+</head>
+<body onload="onLoad()">
+  <header>
+  <nav>
+      <ul>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li id="name"><a href="#">Henry Orsagh</a></li>
+      </ul>
+    <span class="cardending">
+  </nav>
+  <div class="middlestripe"></div>
+  <div class="lightstripe"></div>
+
+  
+  <h1>I Create Experiences.</h1> 
+</header>
+<main>
+<div id="cards">
+  
+  <div class="projects" id="projects">
+    
+    <div class="tabs">
+      <button class="tablinks" onclick="openTab(event, 'design')" id="startTab">Game Design</button>
+      <button class="tablinks" onclick="openTab(event, 'software')">Software Engineering</button>
+      <button class="tablinks" onclick="openTab(event, 'web')">Web Development</button>
+    </div>
+    <div id="design" class="tabcontent">
+    <div class="project">
+      <div class=projectimg><img src="media/TrialsDemoSpedUp.gif" alt="Trials of Persephone demo level"></div>
+      <div class="subcard">
+        <h3>The Trials of Persephone</h3>
+        <i>3/2022-Present</i>
+        <p>The Trials of Persephone is a first person spellslinger game developed in Unreal Engine 5. Its a personal project that I am developing with the help of a 3D artist. The idea started as a VR game, however in testing I found that the concept didn't play well to VR's strengths, so I remade it as a first person game.</p>
+        <a href="trials/index.html">Deep dive</a>
+      </div>
+      <div class="middlestripe"></div>
+      <div class="lightstripe"></div>
+    </div>
+    <div class="project">
+      <div class=projectimg><img src="media/ruins.jpg" alt="de_Ruins"></div>
+      <div class="subcard">
+        <h3>Ruins</h3>
+        <i>2/2019-4/2021</i>
+        <p>Ruins is a CS:GO bomb defusal level created in the hammer editor. It was a solo personal project. I designed and iterated on the layout for engaging and dynamic gameplay. I conducted multiple playtests and analyzed popular maps extensively. I detailed the map with assets and textures from other source levels.</p>
+        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1655784158">See it</a>
+      </div>
+      <div class="middlestripe"></div>
+      <div class="lightstripe"></div>
+    </div>
+    <div class="project">
+      <div class=projectimg><iframe width="560" height="315" src="https://www.youtube.com/embed/OOPMpCzd1oo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="subcard">
+        <h3>Croak and Dagger</h3>
+        <i>8/2022-Present</i>
+        <p>Croak and Dagger is a narrative driven hack n slash that is being designed and developed in Unity by myself and a team of 19 others over the course of 2 semesters. I worked on designing the combat system and levels, and developed some of the AI and VFX.</p>
+      </div>
+      <div class="middlestripe"></div>
+      <div class="lightstripe"></div>
+    </div>
+    <div class="project">
+      <div class=projectimg><iframe width="560" height="315" src="https://www.youtube.com/embed/FYF6lcwtXSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="subcard">
+        <h3>The Halls</h3>
+        <i>1/2021-5/2021</i>
+        <p>The Halls is an endless topdown roguelike written in C# using MonoGame. It was an academic project that I worked on with 3 other students. I created the room sequencing system, AI, and player mechanics. I also implemented the UI, animations and VFX.</p>
+      </div>
+      <div class="middlestripe"></div>
+      <div class="lightstripe"></div>
+    </div>
+    <div  class="project">
+      <div class=projectimg><img src="media/clonemenu.png" alt="clone!"></div>
+      <div class="subcard">
+        <h3>Clone!</h3>
+        <i>4/2022-5/2022</i>
+        <p>Clone! is a web puzzle game written in JavaScript using PixiJS. It was a solo academic project. The game's core mechanic is cloning- you can use your clones as bait to move enemies into vulnerable positions. I developed and utilized multiple collision detection algorithims for this game, including AABB, circle-circle and a line trace function.</p>
+        <a href="clone/index.html">Play it</a>
+      </div>
+      <div class="middlestripe"></div>
+      <div class="lightstripe"></div>
+    </div>
+    <div class="project">
+      <div class=projectimg><iframe width="560" height="315" src="https://www.youtube.com/embed/uNuG9kNqu20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="subcard">
+        <h3>Rune Smith</h3>
+        <i>1/2022-5/2022</i>
+        <p>Rune Smith is a turn-based Roguelite deckbuilding game that I developed in Unity using C# alongside 6 other students. I primarily worked on our rune sequencing system and our UI.</p>
+        <a href="https://people.rit.edu/hco4630/runesmith/index.html">Play it</a>
+      </div>
+      <div class="middlestripe"></div>
+      <div class="lightstripe"></div>
+    </div>
+  </div>
+
+  <div id="software" class="tabcontent">
+    <div class="project">
+      <div class=projectimg><iframe width="560" height="315" src="https://www.youtube.com/embed/OOPMpCzd1oo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="subcard">
+        <h3>Croak and Dagger</h3>
+        <i>8/2022-Present</i>
+        <p>Croak and Dagger is a narrative driven hack n slash that is being designed and developed in Unity by myself and a team of 19 others over the course of 2 semesters. I worked on designing the combat system and levels, and developed some of the AI and VFX.</p>
+      </div>
+      <div class="middlestripe"></div>
+      <div class="lightstripe"></div>
+    </div>
+  </div>
+
+  <div id="web" class="tabcontent">
+    <div  class="project">
+      <div class=projectimg><img src="media/clonemenu.png" alt="clone!"></div>
+      <div class="subcard">
+        <h3>Clone!</h3>
+        <i>4/2022-5/2022</i>
+        <p>Clone! is a web puzzle game written in JavaScript using PixiJS. It was a solo academic project. The game's core mechanic is cloning- you can use your clones as bait to move enemies into vulnerable positions. I developed and utilized multiple collision detection algorithims for this game, including AABB, circle-circle and a line trace function.</p>
+        <a href="clone/index.html">Play it</a>
+      </div>
+      <div class="middlestripe"></div>
+      <div class="lightstripe"></div>
+    </div>
+  </div>
+  </div>  
+  <div class="card" id="about">
+    <div id="portrait"><img src="media/portrait.png" alt="" ></div>
+    <h2>About</h2>
+    <p>Hello! I am a game designer and programmer from Rochester, NY. I specialize in level design and AI and I am passionate about creating immersive, engaging, and memorable gaming experiences!</p>
+    <p>As a game designer, I am always looking to invent fresh and unique game mechanics, and I fully embrace the rapid prototyping methodology. I also excel at problem solving, and I’m never afraid to think outside the box when it comes to finding a solution. I believe the best way to make a game is to start with a clear goal and constantly have the player’s psychology in mind.</p>
+    <p>Outside of games, I love to stay active with ultimate frisbee, and when it’s too cold for that I love to snowboard. I also have a passion for worldbuilding and writing. </p>
+    <div class="cardending"></div>
+  </div>
+<div class="card" id="contact">
+    <h2>Contact</h2>
+    <address>
+      <a href= "mailto: henry.orsagh@gmail.com"><i class="material-icons">email</i>henry.orsagh@gmail.com</a> <br>
+      <a href= "tel: 5857302838"><i class="material-icons">phone</i>(585)730-2838 <br> 
+      <a href="media/HenryOrsagh2-28-23.pdf" target="_blank"><i class="material-icons">book</i>Resume</a> <br>
+    </address>
+</div>
+</div>
+</main>
+</body>
+</html>

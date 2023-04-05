@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Apps-3-HW</title>
+	<style>
+		body{border:1px solid gray;}
+	</style>
+</head>
+<body>
+<h1>My Favorites</h1>
+<h2>My Favorite Colors</h2>
+
+<ol id="colorsList">
+	
+</ol>
+
+<h2>My Favorite Foods</h2>
+
+<ol id="foodsList">
+	
+</ol>
+
+<h2>My Favorite Links</h2>
+
+<ol id="linksList">
+	
+</ol>
+
+<script>
+"use strict";
+let colors = ["blue","green","purple","orange"];
+let foods = ["fried rice", "tacos", "pie"]; // add some foods
+
+// Optional - can you figure out how to pull both the key AND the value
+// from the `links` object literal?
+let links = {
+		"Ben & Jerry's": "https://www.benjerry.com/",
+		"World Anvil" : "https://www.worldanvil.com/",
+		"YouTube" : "http://www.youtube.com/"
+	}
+
+
+let colorList = document.querySelector("#colorsList");
+for(let i = 0; i < colors.length; i++)
+{
+    let listelem = document.createElement("li");
+    listelem.innerHTML = colors[i];
+    colorList.append(listelem);
+}
+
+let foodlist = document.querySelector("#foodsList");
+for(let food of foods)
+{
+    let listelem = document.createElement("li");
+    listelem.innerHTML = food;
+    foodlist.append(listelem);
+}
+
+let linklist = document.querySelector("#linksList");
+for(let link in links)
+{
+    let listelem = document.createElement("li");
+    listelem.innerHTML =  "<a href='" + links[link] + "'>" + link + "</a>";
+    linklist.append(listelem);
+}
+
+
+</script>
+</body>
+</html>

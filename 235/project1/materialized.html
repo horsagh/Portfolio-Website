@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Orsagh</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/project1materialized.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+     
+</head>
+<body>
+  <header>
+    <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#project1">Project 1</a></li>
+    <li><a href="#project2">Project 2</a></li>
+    <li><a href="#project3">Project 3</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Henry Orsagh</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1>I Create Experiences.</h1>
+  </header>
+  <main>
+  <div class="carousel" id="projcarousel">
+    <a class="carousel-item" href="#"><div id="project1" class="projects">
+      <div class=projectimg><img src="https://via.placeholder.com/1000x600/404c4c/808080?text=Project 1" alt="project 1"></div>
+      <div class="subcard" id="descproject1">
+        <h3>Project 1</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, aut. Laborum voluptas earum porro? Earum quam dolore modi ipsum. Temporibus aut modi cupiditate perspiciatis rem atque possimus ullam doloremque assumenda laudantium, repudiandae, harum quasi quae porro mollitia sint odio debitis?</p>
+      </div>
+    </div></a>
+    <a class="carousel-item" href="#"><div id="project2" class="projects">
+      <div class=projectimg><img src="https://via.placeholder.com/1000x600/404c4c/808080?text=Project 2" alt="project 2"></div>
+      <div class="subcard" id="descproject2">
+        <h3>Project 2</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, aut. Laborum voluptas earum porro? Earum quam dolore modi ipsum. Temporibus aut modi cupiditate perspiciatis rem atque possimus ullam doloremque assumenda laudantium, repudiandae, harum quasi quae porro mollitia sint odio debitis?</p>
+      </div>
+    </div></a>
+    <a class="carousel-item" href="#"><div id="project3" class="projects">
+      <div class=projectimg><img src="https://via.placeholder.com/1000x600/404c4c/808080?text=Project 3" alt="project 3"></div>
+      <div class="subcard" id="descproject3">
+        <h3>Project 3</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, aut. Laborum voluptas earum porro? Earum quam dolore modi ipsum. Temporibus aut modi cupiditate perspiciatis rem atque possimus ullam doloremque assumenda laudantium, repudiandae, harum quasi quae porro mollitia sint odio debitis?</p>
+      </div>
+    </div></a>  
+
+</div>
+<div id="cards">
+
+<div class="card" id="about">
+    <div id="portrait"><img src="media/portrait.jpeg" alt="" ></div>
+    <h2>About</h2>
+    <p>I'm a programmer and game designer from Rochester, NY. I've been immersed in technology from a young age, and I'm very logic-oriented. I like to stay active by snowboarding, and when the ground is too green for that I love to wakeboard and play ultimate frisbee. I have a passion for worldbuilding and level design.</p>
+    
+    <span id="cardending"></span>
+</div>
+
+<div class="card" id="contact">
+    <h2>Contact</h2>
+    <address>
+      <a href= "mailto: henry.orsagh@gmail.com"><i class="material-icons">email</i>henry.orsagh@gmail.com</a> <br>
+      <a href= "tel: 5857302838"><i class="material-icons">phone</i>(585)730-2838 <br> 
+      <a href="media/resume.pdf" target="_blank"><i class="material-icons">book</i>Resume</a>
+    </address>
+
+</div>
+</div>
+</main>
+
+
+
+<script>
+
+
+
+  var elemsDrop = document.querySelectorAll('.dropdown-trigger');
+  var instancesDrop = M.Dropdown.init(elemsDrop, {hover: true, coverTrigger: false});
+
+	var elemsCar = document.querySelector('.carousel'); 
+	var instancesCar = M.Carousel.init(elemsCar, {
+    duration: 50
+    //onCycleTo: 
+      //function dropbanner(){
+        //let target = document.querySelector('descproject' + instancesCar.center + 1);
+        //let startTime = Date.now();
+        //let timer = setInterval(function() {
+          //let deltaTime = Date.now() - startTime;
+
+          //target.style.bottom = deltaTime + 'px';
+
+        //if (timePassed > 2000) clearInterval(timer);
+
+      //}, 20);
+      //}
+  });
+  
+  //the carousel got messed up on window resize until the page refreshed, so this reloads the page whenever it gets resized. 
+  window.addEventListener('resize', function(event){
+    if(window.innerWidth > 900) //this way we only do it if theres a carousel
+    {
+      location.reload();
+    }
+    
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+h2{
+    clear: right;
+    border-bottom: 1px solid red; 
+}
+figure{
+    float: right;
+    width: 40%;
+    
+}
+figure img{
+    width: 100%;
+    margin-left: 20px;
+}
+.tet{
+    float: left;
+    width: 400px;
+}
+.long{
+    float: left;
+    width: 500px;
+}
+.square{
+    float: left;
+    width: 300px;
+}
+footer{
+    clear: left;
+    position: relative;
+}
+

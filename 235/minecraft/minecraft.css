@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'dogicaregular';
+    src: url('dogica/dogica-webfont.woff2') format('woff2'),
+         url('dogica/dogica-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'retro_computerregular';
+    src: url('retrocomputer/retro_computer_personal_use-webfont.woff2') format('woff2'),
+         url('retrocomputer/retro_computer_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0%;
+    background-color: #35363D;
+}
+p {
+    font-family: 'dogicaregular';   
+    font-size: small;
+    color: white;
+}
+h1 {
+    padding: 15px;
+    padding-left: 16%;
+    margin: 0%;
+    margin-bottom: 2rem;
+    font-family: 'retro_computerregular';
+    background-color: #686868;
+    color: white;
+}
+h2 {
+    font-family: 'retro_computerregular';
+}
+h3 {
+    font-family: 'retro_computerregular';
+    text-align: center;
+}
+#tree {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+
+
+#treedesc {
+    width: 600px;
+    height: 600px;
+    margin: 1rem;
+    background-color: #686868;
+    color: white;
+    padding: 15px;
+}
+#treepic {
+    width: 400px;
+    height: 400px;
+    margin: 1rem;
+    padding:105px;
+    background: rgb(36,77,62);
+    background: linear-gradient(-45deg, rgba(36,77,62,1) 0%, rgba(232,253,245,1) 100%);
+    border: solid 10px white;
+}
+#name {
+    float: right;
+    text-align: right;
+    margin: 20px;
+    padding-right: 16%;
+}
+#valley {
+    margin-top: 2rem;
+    width: 100%;
+}
+.textblock {
+
+    background-color: #686868;
+    color: white;
+    padding: 15px;
+    width: 280px;
+    height: 280px;
+    margin: 10px;
+}
+#items {
+    display: grid;
+    grid-template-columns: 330px 330px 330px 330px;
+    grid-template-rows: 330px 330px;
+    justify-content: center;
+    margin-top: 30px;
+}
+@media screen and (max-width: 1360px) {#items {
+    display: grid;
+    grid-template-columns: 330px  330px;
+    grid-template-rows: 330px 330px 330px 330px;
+    justify-content: center;
+}}
+.labeledimg {
+    border: solid 10px white;
+    width: 290px;
+    height: 290px;
+    background-color: #324e44;
+    text-align: center;
+    color:white;
+    margin: 10px;
+}
+.borderedimg {
+    width: 200px;
+    height: 200px;
+}
+footer {
+    background-image: url(images/trees.jpg);
+
+    float: left;
+    width: 100%;
+    padding: 50px;
+    background-position: 0 1250px;
+    border-top: solid 10px white;
+    margin-top: 30px;
+    font-family: 'retro_computerregular';
+    font-size: 25px;
+    color: white;
+}
+#copyright {
+    float:right;
+    text-align: right;
+    padding: 50px;
+    padding-right: 80px;
+
+}
+#treesarecool {
+    margin-top: 4rem;
+    float:left;
+}
+    

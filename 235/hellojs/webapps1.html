@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>Hello-4</title>
+   <script>
+     "use strict";
+     // 1) Common JS Objects
+     let colors = ["red", "green", "blue"]; // Array literal
+     let person = {name:"Fred", age:20};   // Object literal
+     let month = new Date().getMonth(); 
+     let age = Math.round(20.999);
+     let age2 = Math.floor(20.999);
+
+    colors.push("gray");
+
+    console.log("last value: " + colors[colors.length - 1]);
+
+    for(let i = 0; i < colors.length; i++)
+    {
+        console.log("color #" + i + ": " + colors[i]);
+    }
+
+    person.school = "RIT";
+
+    console.log(person.name + "'s school: " + person.school);
+
+    console.log("seconds since 1/1/1970: " + Date.now() / 1000);
+
+    console.log("pi: " + Math.PI);
+
+    console.log("Absolute value of -999: " + Math.abs(-999));
+      
+    let hello = "Hello";
+
+    console.log(hello.toUpperCase());
+</script>
+</head>
+<body>
+</body>
+</html>

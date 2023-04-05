@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8-Ball</title>
+    <link rel="stylesheet" href="8ball.css">
+
+</head>
+<body>
+    <h1>The Magic 8-Ball</h1>
+    <p>Enter a yes or no question, and press the button to allow the ball to search the cosmos for answers.</p>
+    <input type="text" id="question">
+    <div id="ballimg"><button type="button" id="rollbutton">Roll</button></div>
+    <h2>Your Answer:</h2>
+    <p id="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, fuga eaque illum accusamus ea voluptate corporis deleniti tempore sapiente ullam.</p>
+    <footer>Created by Henry Orsagh</footer>
+
+    <script>
+
+        let answers = ["Yes.", "No.", "Maybe.", "Only if it's tuesday.", "When the planets align, the answer will be yes."];
+        let rollbutton = document.querySelector("#rollbutton");
+        
+        function roll()
+        {
+            let answerfield = document.querySelector("#answer");
+            answerfield.innerHTML = answers[Math.floor(Math.random() * answers.length)];
+            console.log("roll");
+        }
+        
+        roll();
+        
+        
+        rollbutton.addEventListener("click", (e) => 
+        {
+            roll();
+		});
+     </script>
+</body>
+</html>
