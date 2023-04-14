@@ -11,6 +11,12 @@ body{
     flex-direction: column;
     margin: auto;
 }
+#textcards{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: auto;
+}
 .card{  
     background-color: #1f231e;
     padding: 5%;
@@ -97,6 +103,10 @@ li a{
 }
 @media screen and (max-width:1100px){
     #cards{
+        width: 90%;
+        margin: 0 5%
+    }
+    #textcards{
         width: 90%;
         margin: 0 5%
     }
@@ -194,7 +204,7 @@ img.centered {
     transition: 0.2s;
     color: #dbdbcc;
     border-radius: 10px 10px 0 0;
-    width: 33.3333%;
+    width: 50%;
 }
 .tabs button:hover {
     background-color: #11140e;

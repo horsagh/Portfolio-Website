@@ -5,9 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trials of Persephone Deep Dive</title>
+    <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
     <link rel="stylesheet" href="../css/portfolio.css">
 </head>
 <body>
+    <nav>
+        <ul>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li id="name"><a href="../index.html">Henry Orsagh</a></li>
+        </ul>
+      <span class="cardending">
+    </nav>
+    <div class="middlestripe"></div>
+    <div class="lightstripe"></div>
+</header>
+<div id="textcards">
     <h1>Trials of Persephone</h1>
+    
+        <div class="card">
+        <h2>Conceptionalization</h2>
+        <p>Trials of Persephone started as a submission for the Magic Maker Program, an opportunity for RIT students to work full time on their game or other media concept. Rainey Walker, a 3D Digital Design major at RIT, and I decided to create a game to submit for Magic Maker. We started by looking at previous projects that had been accepted for the Magic Maker program, and looked for themes and commonalities. We found that a wide range of games were accepted, although there was a tendency towards more unique and innovative games with a narrative focus. Since we are both passionate about virtual reality, we decided to make a VR game. VR shooters have always been very popular, but we wanted more fantastical theming.</p>
+    <p>So, we decided to have our player play as a spellcaster, where they would have to aim their spells similar to aiming in a shooter, but by theming it as magic we gave ourselves more freedom to experiment with mechanics that wouldn’t fit a gun. We also loved how games like Boneworks and Half-Life: Alyx encouraged the player to interact with the environment and physics objects, so we decided that the player would draw their spells from the environment around them. </p>
+    
+    <h2>Prototyping</h2>
+    <p>At this point in the development process, Rainey started working on our visual style and narrative, while I started to work on prototyping the mechanics. We were running low on time to submit for the Magic Maker Program, so my prototype was very quick and messy. We decided to use Unreal Engine because its the engine I’m most familiar with, and it makes development for VR very easy. </p>
+    <p>The first thing I did was set up the character to have their hands interact with the environment using Unreal’s physics handles, and I set up arms for the character using IK. Next I worked on the magic system- I set it up so that the player can harvest mana from the environment with the grip button, and then fire it with the trigger button. I used primitives to give the player some diagetic UI on their wrists to see what mana they have. I set up a basic enemy AI, and implemented a Pokémon-esque damage type system. I also set up some simple environmental effects of the different mana types, such as stone being used to make bridges and flora being used to grow plants. </p>
+    <p>I wasn’t very happy with the prototype when it came time to submit it- it was very hacked together, which would have been fine, but also the mechanics just weren’t fun, and they didn’t play to the strengths of virtual reality.</p>
+    <h2>Magic Maker</h2>
+    <p>Despite not being too happy with the way the prototype turned out, We still submitted Trials of Persephone to the Magic Maker Program. Unfortunately, our project didn’t get chosen. We decided to keep working on it, although with the results of the prototype, and advise from the people at Magic Maker, we decided to rethink some of our original design decisions. </p>
+    
+    <h2>Back to the Drawing Board</h2>
+        <p>The first thing to do was to think about what went wrong the first time around. One of my main takeaways was that we started working in the engine too late- we invested so much time into designing the mechanics without even knowing if they were going to work, or if they were going to be fun. Another issue was that of scope- it was a very ambitious project, especially for 2 people. We were very susceptible to feature creep, and having the game in VR just accentuated the problem. In order to address these issues, we decided to transition away from VR, scale down the narrative elements, and begin prototyping right away.</p>
+    
+    <h2>Prototyping (but better this time)</h2>
+        <p>I did a lot of prototyping. I iterated through tons of different ideas, looking for mechanics that felt fun- my ideology was if it was fun without any polish, it would definitely be fun with. As I worked on it, I found that movement mechanics worked really well- something that I couldn’t pursue fully in VR, due to motion sickness. The player needing to collect mana while falling in order to save themself led to lots of tense and exciting moments, that felt incredibly gratifying to pull off. I decided to build around that feeling- where the player is moving fast, and has to think fast to keep up with their movements. It was a little too fast though, so I reduced the gravity scale slightly. I also found that the most exciting moments were when the player had no mana on hand, instead relying on collecting mana as they used it. So I decided to encourage that- I developed a mechanic where as long as the player is in the air with no mana, they have the ability to slow down time, drawing inspiration from SUPERHOT. </p>
+    </div>
+    </div>
+    
 </body>
 </html>

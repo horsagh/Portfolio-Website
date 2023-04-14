@@ -5,6 +5,7 @@
 <meta charset="utf-8" />
 <title>Clone!</title>
 <link rel="stylesheet" href="../css/portfolio.css">
+<link rel="icon" type="image/x-icon" href="../media/favicon.ico">
 
 </head>
 <body onload="onLoad()">
@@ -17,6 +18,19 @@
 <script src="js/classes.js"></script>
 <script src="js/scenes.js"></script>
 <script src="js/main.js"></script>
+<header>
+    <nav>
+        <ul>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li id="name"><a href="../index.html">Henry Orsagh</a></li>
+        </ul>
+      <span class="cardending">
+    </nav>
+    <div class="middlestripe"></div>
+    <div class="lightstripe"></div>
+</header>
 <div id="cards">
 <h1>Clone!</h1>
 <div class="card" id="game">
@@ -25,12 +39,26 @@
 <div class="card">
     <h2>Controls</h2>
     <p> Move with W A S D. Press space or E to create a clone. If a shrogg sees you in it's vision, it will win! outsmart them with your clones, and reach the blue portal to go to the next level. Good Luck!</p>
-</div></div>   
-<footer>
-    Made by Henry Orsagh, 2022. <br>
-    <a href="proposal.html">Proposal</a><br>
-    <a href="documentation.html">Documentation</a><br>    
-    <a href="../index.html">Portfolio</a>
-</footer> 
+    </div> 
+    <div class="card">
+        <h2>My Process</h2>
+        
+            <p>You can check out my original proposal for Clone!  <a href="proposal.html">here</a>.</p>
+
+            <p>This project was a large undertaking for how little time I had to make it. That being said, I used the time I had efficiently and faced a number of challenges along the way.</p>
+
+            <p>The first aspect I dealt with was visuals- I drew my own spritesheets in Photoshop, which took me a while to get my process down, but once I got into a groove it went by pretty quickly. Establishing my visual style early allowed me to skip the greyboxing phase, which saved me a lot of time on this short project.</p>
+            
+            <p>The next step was to get the player working. Developing the movement mechanics and collision detection was pretty straightforward, as it’s something I’ve done many times before. Getting the animations working gave me a bit of trouble, as I was unfamiliar with pixiJS’ animated sprites, but with some trial and error I was able to get it working in a way I was happy with. Next was the cloning mechanic. I tested a few different implementations, before settling on the one used now.</p>
+            
+            <p>Next I developed the enemies, the Shroggs. I was running out of time, so instead of giving the Shroggs a cone for their sightlines, I stuck to what I knew how to do and used circle circle collision detection, and then I wrote my own line trace function to check for line of sight.</p>
+            
+            <p>Because of how I wrote my collision detection and how I made my sprites, developing the levels was really easy. However, after finishing the first level I realized that I hadn’t included a way to get to the next level. I drew a simple sprite for a portal, and brought it in.</p>
+            
+            <p>Something that I wish I would've done that I didn't was get pixiJS working on Live Server. I pushed every little change to the server in order to test it, which in the long run probably cost me a lot of time that I could've spent fixing bugs and developing more features.</p>                
+
+            
+        </div>
+</div>
 </body>
 </html>
