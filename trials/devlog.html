@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trials of Persephone Dev Log</title>
+    <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li id="name"><a href="../index.html">Henry Orsagh</a></li>
+        </ul>
+      <span class="cardending">
+    </nav>
+    <div class="middlestripe"></div>
+    <div class="lightstripe"></div>
+</header>
+<div id="textcards">
+    <h1>Trials of Persephone Dev Log</h1>
+        <div class="card">
+            <h2>Corrupted Ferrous Spirit- Earthquake Attack</h2>
+            <h4>4/14/2023</h4>
+            <p>In my testing, I found that the game was more fun the longer the player spent in mid air- So I wanted the enemies to encourage that. I decided that the Corrupted Ferrous Spirit should have an earthquake like attack, where if the player was on the ground near the Spirit, they would take damage. 
+            </p>
+            <p>The first issue I ran into was detecting what floor the enemy was on- I didn’t want this earthquake attack to affect seperate landmasses (for level design, I was considering the idea of floating islands- I didn’t want the enemy on one island to be able to effect the player on another) I also figured that one landmass could have multiple meshes, and I didn’t want the player to be right next to the enemy but on a different mesh to not be affected. The solution to this was to recursively get every mesh that is overlapping the mesh the enemy is standing on. This led to some unexpected results though.
+            </p>
+            <p>Only some of the overlapping meshes were being detected. After quite a lot of headscratching, I found that it was an issue with how I was calling the recursive function. I was doing a depth first approach, and for some reason when it finished a depth it would end the function all together. I think this was a limitation of unreal’s blueprints, but I’m not positive. Switching to a breadth first approach fixed the issue.
+            </p>
+            <p>The next issue I ran into was that of visualizing the attack. My first thought was decals, but I couldn’t find a way in unreal to mask a specific decal only onto certain meshes. You can disable decals altogether on a mesh, but if I wanted to add more decals in the future that would cause lots of problems. I experimented a bit with Custom Stencil Buffer and Custom Depth Buffer, but I wasn’t happy with the result, so I decided to switch my approach entirely. My new idea was to use line traces from the top of the attack area to the bottom, checking for collisions against the affected ground. At each collision point, it would spawn particle effects to show that that ground is dangerous. I drew this sketch to help plan my approach.
+            </p>
+            <img class="centered" src="media/Ferrous Attack.png" alt="diagram showing the attack's visualization plan">
+        </div>
+</div>
+</body>
+</html>
