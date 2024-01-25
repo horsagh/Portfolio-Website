@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKBOX</title>
+    <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li id="name"><a href="../index.html">Henry Orsagh</a></li>
+        </ul>
+      <span class="cardending">
+    </nav>
+    <div class="middlestripe"></div>
+    <div class="lightstripe"></div>
+</header>
+<div id="textcards">
+    <h1>HACKBOX</h1>
+    <h2>Professional Project, May 2023 - Present</h2>
+
+        <div class="card">
+<!-- Background img of hackbox-->
+
+We drew our inspiration for HACKBOX from games like WarioWare and Mario Party. Each minigame in HACKBOX represents a cybersecurity profession, based on the <a href="https://niccs.cisa.gov/workforce-development/nice-framework">NICE framework</a>. I designed and developed two of these minigames, Packet Panic and Exfiltrigue. I also designed and developed the agency, which handled account progression and acted as a “hub” for selecting minigames. We brought HACKBOX to 3 local high schools for playtesting, where I was in charge of managing the playtest devices, observing the playtesters, and resolving any issues that came up with the game.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6Ncc5ixZMTo?si=2NyuSBOF3kPe9jue" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h3>The Agency</h3>
+<!--agency video-->
+	
+<p>On the design side, the Agency is meant to keep players playing. I used Unity’s tilemaps to make a building system, where you can arrange your floorplan and place your Agents, who each have a corresponding minigame. This system acts as a creative outlet for our players and encourages them to make their agency their own.</p>
+<p>Agents need to be hired with bits- a currency earned from playing minigames. This way the player isn’t overwhelmed by choice when they first start and have something to work towards to keep them playing.</p>
+<p>The hardest part of developing the agency was creating the data persistence (saving) system. I decided to utilize Google Play Games Services (GPGS) for cloud saving- so that players could keep their agency if they switch devices. I ran into a lot of trouble implementing GPGS and spent days debugging– getting well acquainted with Unity’s build settings, Google Play Console, and app publishing.</p>
+<p>Once I had GPGS working, I developed a data persistence framework that would automatically save your agency whenever you left, and load it when you return. I designed the framework to make it easy to add new things to save, making my job easier down the road.</p>
+<p>Another part of the agency was the minigame manager script. I wrote it to make the process of adding new minigames as straightforward as possible so that other people working on the project could add their minigames without too much struggle.</p>
+
+
+<h3>Packet Panic</h3>
+<!--video of packet panic-->
+
+<p>Packet Panic is a minigame emulating the job of a Cyber Defense Analyst. It has two phases: Network Defense, and Packet Capture. Network Defense involves tapping malicious (red) packets before they reach your core while allowing innocent (blue) packets through.</p>
+<p>In Packet Capture, you have an antivirus “packet” that will automatically chase a single malicious packet along randomized paths. The player’s job is to rotate the paths to allow the slower antivirus packet to catch the malicious packet before the time runs out.</p>
+<p>I had two goals with Packet Panic. First, I wanted to demystify the profession. This meant theming the game similar to what a Cyber Defense Analyst would do, albeit simplified. The second goal was to subtly teach a skill that a Cyber Defense Analyst would use- specifically pattern recognition.</p> 
+<p>In Network Defense, sometimes a packet appears innocent at first, but once it gets closer to the core will flip to reveal itself as malicious. However, the packets always spawn in specific patterns- and so if you recognize a spawn pattern and there’s a packet that should be malicious but appears innocent, you can gain extra points by tapping it before it flips. I utilized Unity’s scriptable objects for the spawn patterns, which made it easy to make and modify them.</p>
+<p>Packet Panic is a fast-paced, high-energy minigame. That meant clear visuals were incredibly important. I wanted to make sure the malicious and innocent packets were easily distinguishable. I made the red of the malicious packets deeper and more vibrant, to draw attention. I also gave them different sprites beyond the color to make them still distinguishable to colorblind players. I also made procedural animations and particle systems to give the player feedback when they tap a malicious packet, a malicious packet reaches their core, or a packet flips.</p> 
+<p>A challenge I faced developing Packet Panic was the pathfinding in Packet Capture. I used the A* algorithm for the antivirus packet. The malicious packet uses a modified A*, where the destination is set to be in the opposite direction of the antivirus packet, or at an angle if it can get further away.</p>
+
+<h3>Exfiltrigue</h3>
+<!--video of exfiltrigue-->
+<p>Exfiltrigue emulates the job of a Cyber Operator. It has two phases: Infiltration, and Exfiltration. In Infiltration, the player has to “spearphish.” Spearphishing in cybersecurity is a phishing email customized to target a specific person. For Infltratrion, I made spearphishing more literal- the player controls a spear, and has to move their spear to capture fish, which represent personal information of the Cyber Operator’s target. As the player catches fish, they build a spearphishing email- and once they’ve caught enough, theycan send the email, and move on to the next phase.</p>
+<p>In Exfiltration, the player has hacked into a hacker’s computer, and they have to exfiltrate incriminating files. The player is presented with file names, and has to either put them in the trash, or navigate them through the data loss prevention system to upload them tothe cloud. When you upload a file to the cloud, you earn points based on how incriminating the file was.</p>
+<p>Similarly to Packet Panic, I wanted to demystify what a Cyber Operator does, and also subtly teach a skill that Cyber Operators use. For Exfiltrigue, the skill is social engineering. Designing a minigame that involved social engineering was a challenge, becausefundamentally social engineering is about understanding people- and multiplayer, or AI that could resemble a human, wasn’t feasible.</p> 
+<p>In Exfiltration, social engineering is taught through the file names. The player has to determine based on the file names whether the files are incriminating or not, and then decide whether the file is worth exfiltrating.</p>
+<p>In Infiltration, social engineering is taught through the fish AI. They dart around, especially when the player gets close. Being able to predict their movement, or catching the fish when they’ve just darted and aren’t able to dart again, requires the player to thinkstrategically about how the fish will act, similarly to how social engineering is used by Cyber Operators, and in cybersecurity as a whole.</p>
+<p>A lot of developing Exfiltrigue was using Unity’s physics system to apply forces and impulses to the fish, the spear, and the files. This was pretty straightforward for me because of my experience with Unreal’s physics from working on <a href="../trials/">Trials of Persephone</a>.</p>
+<p>The hardest part of developing Exfiltrigue was the visuals. I went through a number of iterations on background, trying to make a tiling water texture that fit the style of the game. In the end, I used two textures, both of which I made in Photoshop- one was a gradient with some smudging, and the other was a semi-transparent ripple texture. They are on different parallax layers to give the illusion of depth, and they “float” in different directions, to give a sense of motion. To make the scene feel less empty, I added bubble particles.</p>
+</div>
+</div>
+</body>
+</html>
