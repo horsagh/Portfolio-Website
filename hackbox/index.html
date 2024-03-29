@@ -42,7 +42,7 @@ We drew our inspiration for HACKBOX from games like WarioWare and Mario Party. E
 
 
 <h3>Packet Panic</h3>
-<!--video of packet panic-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ye8xD7WEu4M?si=bKOleQ2aVgJt8uYD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <p>Packet Panic is a minigame emulating the job of a Cyber Defense Analyst. It has two phases: Network Defense, and Packet Capture. Network Defense involves tapping malicious (red) packets before they reach your core while allowing innocent (blue) packets through.</p>
 <p>In Packet Capture, you have an antivirus “packet” that will automatically chase a single malicious packet along randomized paths. The player’s job is to rotate the paths to allow the slower antivirus packet to catch the malicious packet before the time runs out.</p>
@@ -52,7 +52,7 @@ We drew our inspiration for HACKBOX from games like WarioWare and Mario Party. E
 <p>A challenge I faced developing Packet Panic was the pathfinding in Packet Capture. I used the A* algorithm for the antivirus packet. The malicious packet uses a modified A*, where the destination is set to be in the opposite direction of the antivirus packet, or at an angle if it can get further away.</p>
 
 <h3>Exfiltrigue</h3>
-<!--video of exfiltrigue-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AAywPCtKU9s?si=8DRf9hqxoyKiTBMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <p>Exfiltrigue emulates the job of a Cyber Operator. It has two phases: Infiltration, and Exfiltration. In Infiltration, the player has to “spearphish.” Spearphishing in cybersecurity is a phishing email customized to target a specific person. For Infltratrion, I made spearphishing more literal- the player controls a spear, and has to move their spear to capture fish, which represent personal information of the Cyber Operator’s target. As the player catches fish, they build a spearphishing email- and once they’ve caught enough, theycan send the email, and move on to the next phase.</p>
 <p>In Exfiltration, the player has hacked into a hacker’s computer, and they have to exfiltrate incriminating files. The player is presented with file names, and has to either put them in the trash, or navigate them through the data loss prevention system to upload them tothe cloud. When you upload a file to the cloud, you earn points based on how incriminating the file was.</p>
 <p>Similarly to Packet Panic, I wanted to demystify what a Cyber Operator does, and also subtly teach a skill that Cyber Operators use. For Exfiltrigue, the skill is social engineering. Designing a minigame that involved social engineering was a challenge, becausefundamentally social engineering is about understanding people- and multiplayer, or AI that could resemble a human, wasn’t feasible.</p> 
